@@ -101,10 +101,17 @@ export default function Dashboard({ endpoint = 'creatures' }) {
   return (
     <section className="dashboard">
       <header>
-        {/* <h2>Dashboard</h2> */}
+        <div>
+          <h4><em>
+          Filter and search an API serving data on all in-game items of
+          <br />
+          Zelda: Breath of the Wild and Zelda: Tears of the Kingdom
+         </em></h4>
+        </div>
+         
         <div className="controls">
-          <label style={{display: 'flex', gap: '0.5rem', alignItems: 'center'}}>
-            <span className="control-label" style={{fontSize: '0.9rem'}}>Category:</span>
+          <label style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+            <span className="control-label" style={{ fontSize: '0.9rem' }}>Category:</span>
             <select aria-label="Select API category" value={fetchCategory} onChange={e => setFetchCategory(e.target.value)}>
               <option value="all">All</option>
               <option value="creatures">Creatures</option>

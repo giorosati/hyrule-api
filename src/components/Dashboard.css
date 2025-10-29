@@ -16,14 +16,22 @@
 }
 .dashboard header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* always stack title above controls */
+  align-items: stretch;
   gap: 1rem;
 }
+
+/* Reduce vertical spacing between the global page title and the
+   dashboard subtitle. The H1 lives in `App` and the H4 lives inside
+   the dashboard header; lowering their margins brings them closer. */
+.App h1 { margin-bottom: 0.25rem; }
+.dashboard header h4 { margin: 0.15rem 0 0.35rem 0; }
 .controls {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* allow controls to wrap on narrow widths */
 }
 
 /* Label used before form controls (category dropdown) */
